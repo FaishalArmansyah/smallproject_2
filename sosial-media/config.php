@@ -1,6 +1,6 @@
 <?php
 
-$db_host = "dbserver.cir7gtvctrcn.ap-southeast-1.rds.amazonaws.com";
+$db_host = "isi-dbserver";
 $db_user = "devopscilsy";
 $db_pass = "1234567890";
 $db_name = "dbsosmed";
