@@ -11,6 +11,7 @@ sudo systemctl restart apache2
 
 echo "===== Step 3 - Download App ====="
 sudo cp -r smallproject_2/sosial-media /var/www/
+sed -i 's/localhost/isi-dbserver/g' /var/www/sosial-media/config.php
 sudo cp smallproject_2/sosial-media/sosmed.conf /etc/apache2/sites-available/
 sudo cp smallproject_2/sosial-media/servername.conf /etc/apache2/conf-available/
 sudo a2enconf servername.conf && sudo a2ensite sosmed.conf && sudo a2dissite 000-default.conf

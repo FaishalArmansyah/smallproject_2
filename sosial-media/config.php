@@ -1,6 +1,6 @@
 <?php
 
-$db_host = "isi-dbserver";
+$db_host = "localhost";
 $db_user = "devopscilsy";
 $db_pass = "1234567890";
 $db_name = "dbsosmed";
