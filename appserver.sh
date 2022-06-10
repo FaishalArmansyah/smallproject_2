@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "===== Step 1 - Install Apache ====="
 sudo apt update
-sudo apt install -y apache2 apache2-utils
+sudo apt install -y apache2 apache2-utils mysql-client
 sudo systemctl start apache2 && sudo systemctl enable apache2
 
 echo "===== Step 2 - Install PHP 7.4 ====="
