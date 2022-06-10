@@ -29,10 +29,9 @@ sudo make install
 cd ..
 echo AKIAR33JBTGZEXLKM3GQ:kjMKm/mR5PTQEuqh0bl8n0E7x7IQAU9phS+2g6sS > /etc/passwd-s3fs
 sudo chmod 640 /etc/passwd-s3fs
-sudo mkdir /var/www/sosial-media
-sudo s3fs sosmed-img-bucket /var/www/sosial-media/img -o passwd_file=/etc/passwd-s3fs -o url=https://s3.ap-southeast-1.amazonaws.com/ -ouid=1001,gid=1001,allow_other
+sudo s3fs sosmed-img-bucket -o nonempty /var/www/sosial-media/img -o passwd_file=/etc/passwd-s3fs -o url=https://s3.ap-southeast-1.amazonaws.com/ -o allow_other
 sudo chmod -R o+rx /var/www/sosial-media/img/*
-sudo s3fs sosmed-apachelog-bucket /var/log/apache2/sosmed -o passwd_file=/etc/passwd-s3fs -o url=https://s3.ap-southeast-1.amazonaws.com/ -ouid=1001,gid=1001,allow_other
+sudo s3fs sosmed-apachelog-bucket -o nonempty /var/log/apache2/sosmed -o passwd_file=/etc/passwd-s3fs -o url=https://s3.ap-southeast-1.amazonaws.com/ -o allow_other
 sudo chmod 640 /var/log/apache2/sosmed/*
 sudo systemctl restart apache2
 
